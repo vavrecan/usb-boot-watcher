@@ -14,7 +14,7 @@ SYSTEM\CurrentControlSet\Services\usbuhci
 SYSTEM\CurrentControlSet\Services\usbhub
 ```
 
-It sets value `Start` to `0` and value `Group` to `System Reserved` when changed by driver updates / invalidations. 
+It sets value `Start` to `0` and value `Group` to `Boot Bus Extender` when changed by driver updates / invalidations. 
 
 UsbBootWatcher is updating usbstor, usbehci, usbohci, usbuhci, usbhub drivers, but you can also specify custom driver by addint it to `UsbBootWatcher.conf`.
 
