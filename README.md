@@ -53,8 +53,9 @@ UsbBootWatcher /prepare d:\Windows\System32
 
 Boot your USB device and continue installation. If you receive 0x0000007B BSOD after first installation step (device installations), just re-run UsbBootWatcher prepare command from your working windows installation or recovery console. 
 
-## Author
+## Authors
 - [Marek Vavrecan](mailto:vavrecan@gmail.com)
+- [Klaus Daniel Terhorst](mailto:nightos@gmail.com)
 - [Donate by PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=DX479UBWGSMUG&lc=US&item_name=Friend%20List%20Watcher&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted)
 
 ## License
