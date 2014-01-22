@@ -26,7 +26,7 @@ Microsoft does not officially allows you to install Windows to USB device, hovew
 You will need these tools: imagex, bcdboot. You can get these from [here](http://www.rmprepusb.com/tutorials/getwaiktools).
 
 Then prepare your drive (create primary partition and make it active on your usb drive) using diskpart:
-```bash
+```
 diskpark
 list disk
 select disk __DISK__
@@ -39,13 +39,13 @@ exit
 ```
 
 Now you can use imagex to copy your installation image to the device (considering d: is your USB device and e: windows installation medium containing install.wim):
-```bash
+```
 imagex /apply e:\sources\install.wim 3 d:
 bcdboot d:\Windows /s d: /v
 ```
 
 Done! And now you can install UsbBootWatcher to the target device like (it will automatically copy to target device and create service there): 
-```bash
+```
 UsbBootWatcher /prepare d:\Windows\System32
 ```
 
