@@ -43,8 +43,8 @@ Now you can use imagex to copy your installation image to the device (considerin
 imagex /apply e:\sources\install.wim 3 d:
 bcdboot d:\Windows /s d: /v
 ```
-[More about imagex](http://technet.microsoft.com/en-us/library/cc749447(v=ws.10).aspx)
-[More about bcdboot](http://technet.microsoft.com/en-us/library/dd744347(v=ws.10).aspx)
+[More about imagex](http://technet.microsoft.com/en-us/library/cc749447%28v=ws.10%29.aspx)
+[More about bcdboot](http://technet.microsoft.com/en-us/library/dd744347%28v=ws.10%29.aspx)
 
 Done! And now you can install UsbBootWatcher to the target device like (it will automatically copy to target device and create service there): 
 ```
