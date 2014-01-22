@@ -1,22 +1,20 @@
 UsbBootWatcher
 ================
-This is simple service that allows you to boot installed Windows NT6.1 (7/8, Server 2012) from USB HDD or USB stick. 
-Method is based on this [post](http://www.techspot.com/community/topics/how-to-install-and-boot-windows-on-an-external-usb-hard-drive.116114/) - it allows USB drivers to be loaded during boot time (no more BSOD 0x0000007B). 
+This is simple service that allows you to run Windows NT6.1 (7/8, Server 2012) from USB HDD or USB stick. 
+Method is based on this [post](http://www.techspot.com/community/topics/how-to-install-and-boot-windows-on-an-external-usb-hard-drive.116114/) - it allows USB bus driver to be loaded during boot time (no more BSOD 0x0000007B). 
 
 To make your windows bootable from USB device, you normally have to modify driver (.inf files) and system to accept digitally unsigned drivers. This service allows you to avoid these changes and still have the digital signature enforcement enabled.
 
 This is possible because the UsbBootWatcher service monitors registry for changes under these paths:
-```
 SYSTEM\CurrentControlSet\Services\usbstor
 SYSTEM\CurrentControlSet\Services\usbehci
 SYSTEM\CurrentControlSet\Services\usbohci
 SYSTEM\CurrentControlSet\Services\usbuhci
 SYSTEM\CurrentControlSet\Services\usbhub
-```
 
 It sets value `Start` to `0` and value `Group` to `System Reserved` when changed by driver updates / invalidations. 
 
-UsbBootWatcher is updating usbstor, usbehci, usbohci, usbuhci, usbhub drivers, but you can also specify custom driver by addint it to `UsbBootWatcher.conf`.
+Defaulty its updating usbstor, usbehci, usbohci, usbuhci, usbhub drivers, but you can also specify custom driver by editing `UsbBootWatcher.conf`.
 
 Installing Windows to USB device
 ----------------
