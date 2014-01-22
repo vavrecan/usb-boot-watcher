@@ -3,9 +3,9 @@ UsbBootWatcher
 This is simple service that allows you to boot installed Windows NT6.1 (7/8, Server 2012) from USB HDD or USB stick. 
 Method is based on this [post](http://www.techspot.com/community/topics/how-to-install-and-boot-windows-on-an-external-usb-hard-drive.116114/) - it allows USB drivers to be loaded during boot time (no more BSOD 0x0000007B). 
 
-To make your windows bootable from USB device, you normally have to modify driver (.inf files) and system to accept digitally unsigned drivers. This service allows you to avoid these changes and still have the digital signature enforcement enabled.
+To make your windows bootable from USB device, you normally have to modify driver (.inf files) and system to accept digitally unsigned drivers. This service allows you to avoid changes to drivers and have the digital signature enforcement enabled.
 
-This is possible because the UsbBootWatcher service monitors registry for changes under these paths:
+This is possible because the UsbBootWatcher service monitors registry for changes under following paths:
 ```
 SYSTEM\CurrentControlSet\Services\usbstor
 SYSTEM\CurrentControlSet\Services\usbehci
@@ -23,7 +23,7 @@ Installing Windows to USB device
 
 Microsoft does not officially allows you to install Windows to USB device, hovewer, there is simple trick to do this - you can install it like OEM partner. To do so, you will need existing windows installation with admin permissions (or use Recovery console).
 
-You will need these tools: imagex, bcdboot. You can get these from [here](http://www.rmprepusb.com/tutorials/getwaiktools).
+You will need these tools: imagex, bcdboot. You can get them from [here](http://www.rmprepusb.com/tutorials/getwaiktools).
 
 Then prepare your drive (create primary partition and make it active on your usb drive) using diskpart:
 ```
