@@ -1,7 +1,7 @@
 UsbBootWatcher
 ================
-This is simple service that allows you to boot installed Windows NT6.1 (7/8, Server 2012) from USB HDD or USB stick. 
-Method is based on this [post](http://www.techspot.com/community/topics/how-to-install-and-boot-windows-on-an-external-usb-hard-drive.116114/) - it allows USB drivers to be loaded during boot time (no more BSOD 0x0000007B). 
+This is simple service that allows you to boot installed Windows NT (XP, 7/8, Server 2012) from USB HDD or USB stick. 
+Method is based on [findings from Dietmar Stoelting](http://www.911cd.net/forums/index.php?showtopic=14181) - it allows USB drivers to be loaded during boot time (no more BSOD 0x0000007B). 
 
 To make your windows bootable from USB device, you normally have to modify driver (.inf files) and system to accept digitally unsigned drivers. This service allows you to avoid changes to drivers and have the digital signature enforcement enabled.
 
