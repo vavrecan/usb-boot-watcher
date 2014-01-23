@@ -27,7 +27,7 @@ You will need these tools: imagex, bcdboot. You can get them from [here](http://
 
 Then prepare your drive (create primary partition and make it active on your usb drive) using diskpart:
 ```
-diskpark
+diskpart
 list disk
 select disk __DISK__
 list partition
